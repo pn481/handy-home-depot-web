@@ -1,26 +1,224 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>handy-home-depot-web</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Handy Hardware Depot</title>
+    <meta name="description" content="Your one-stop shop for building materials and hardware supplies" />
+    <meta name="author" content="Handy Hardware Depot" />
 
-    <meta property="og:title" content="handy-home-depot-web" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Handy Hardware Depot" />
+    <meta property="og:description" content="Your one-stop shop for building materials and hardware supplies" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html"><h1>Handy Hardware</h1></a>
+          </div>
+          <div class="search-bar">
+            <form id="search-form">
+              <input type="text" placeholder="Search for products...">
+              <button type="submit"><i class="icon-search">🔍</i></button>
+            </form>
+          </div>
+          <nav class="main-nav">
+            <button id="mobile-menu-button" class="mobile-menu-button">☰</button>
+            <ul class="nav-links" id="nav-links">
+              <li><a href="#" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+              <li><a href="#">👤 Account</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <nav class="category-nav">
+          <ul>
+            <li><a href="#building-materials">Building Materials</a></li>
+            <li><a href="#tools">Tools & Equipment</a></li>
+            <li><a href="#plumbing">Plumbing</a></li>
+            <li><a href="#electrical">Electrical</a></li>
+            <li><a href="#paint">Paint & Supplies</a></li>
+            <li><a href="#specials" class="special-link">Special Offers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Build With <span>Confidence</span></h1>
+            <p>Shop top-quality building materials, tools, and hardware for all your construction projects at competitive prices.</p>
+            <div class="hero-buttons">
+              <a href="#building-materials" class="btn btn-primary">Shop Materials</a>
+              <a href="#specials" class="btn btn-outline">View Specials</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="categories">
+        <div class="container">
+          <h2 class="section-title">Shop By Category</h2>
+          <p class="section-subtitle">Find everything you need for your next project</p>
+          
+          <div class="category-grid" id="categories-container">
+            <!-- Categories will be loaded here via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="featured-products" id="building-materials">
+        <div class="container">
+          <h2 class="section-title">Featured Building Materials</h2>
+          <div class="products-grid" id="featured-products">
+            <!-- Products will be loaded here via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Offers -->
+      <section class="special-offers" id="specials">
+        <div class="container">
+          <h2 class="section-title">Special Offers</h2>
+          <div class="products-grid" id="special-offers">
+            <!-- Products with discounts will be loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services">
+        <div class="container">
+          <h2 class="section-title">Our Services</h2>
+          <div class="services-grid">
+            <div class="service">
+              <div class="icon">🚚</div>
+              <h3>Free Delivery</h3>
+              <p>On orders over $500 within 25 miles</p>
+            </div>
+            <div class="service">
+              <div class="icon">🔧</div>
+              <h3>Tool Rental</h3>
+              <p>Professional tools available for rent</p>
+            </div>
+            <div class="service">
+              <div class="icon">📐</div>
+              <h3>Project Planning</h3>
+              <p>Expert advice on your construction projects</p>
+            </div>
+            <div class="service">
+              <div class="icon">🏠</div>
+              <h3>Installation</h3>
+              <p>Professional installation services</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscribe to Newsletter -->
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-content">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Sign up to receive updates on special offers, new products, and DIY tips.</p>
+            <form id="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Handy Hardware</h3>
+            <p>Your one-stop shop for building materials and hardware supplies.</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="#" aria-label="Instagram">📷</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="#building-materials">Building Materials</a></li>
+              <li><a href="#tools">Tools & Equipment</a></li>
+              <li><a href="#plumbing">Plumbing</a></li>
+              <li><a href="#electrical">Electrical</a></li>
+              <li><a href="#paint">Paint & Supplies</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Shipping Information</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Order Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <address>
+              <p>123 Builder Street<br>Construction City, CC 12345</p>
+              <p>Phone: (555) 123-4567</p>
+              <p>Email: info@handyhardware.com</p>
+            </address>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Handy Hardware. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items">
+          <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button id="checkout-btn" class="btn btn-primary">Proceed to Checkout</button>
+          <button id="continue-shopping" class="btn btn-outline">Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="script.js"></script>
   </body>
 </html>
